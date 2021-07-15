@@ -1,0 +1,84 @@
+{
+  "app": {
+    "bundleName": "com.linyuanlin.todolist",
+    "vendor": "linyuanlin",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.linyuanlin.todolist",
+    "name": ".MyApplication",
+    "mainAbility": "com.linyuanlin.todolist.MainAbility",
+    "deviceType": [
+      "phone"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "metaData": {
+      "customizeData": [{"name":  "", "value": ""}]
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "name": "com.linyuanlin.todolist.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      },
+      {
+        "permissions": [
+          "com.linyuanlin.todolist.DataAbilityShellProvider.PROVIDER"
+        ],
+        "name": "com.linyuanlin.todolist.TodoDataAbility",
+        "icon": "$media:icon",
+        "description": "$string:tododataability_description",
+        "type": "data",
+        "uri": "dataability://com.linyuanlin.todolist.TodoDataAbility"
+      },
+      {
+        "name": "com.linyuanlin.todolist.DataBridgeAbility",
+        "icon": "$media:icon",
+        "description": "$string:databridgeability_description",
+        "type": "service"
+      }
+    ],
+    "js": [
+      {
+        "pages": [
+          "pages/index/index",
+          "pages/detail/detail",
+          "pages/create/create",
+          "pages/edit/edit"
+        ],
+        "name": "default",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.DISTRIBUTED_DATASYNC"
+      }
+    ]
+  }
+}

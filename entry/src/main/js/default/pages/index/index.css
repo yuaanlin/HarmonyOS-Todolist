@@ -1,0 +1,89 @@
+.container {
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 40px;
+    color: #000000;
+    opacity: 0.9;
+}
+
+.checked-title {
+    font-weight: 300;
+    font-size: 24px;
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.unchecked-radio {
+    border: 1px solid gray;
+    margin: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+}
+
+.checked-radio {
+    border: 1px solid gray;
+    background-color: gray;
+    margin: 8px;
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+}
+
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todoItem > .title {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+button {
+    background-color: #FFA200;
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    border-radius: 64px;
+    height: 72px;
+    width: 72px;
+    font-size: 36px;
+}
+
+@media screen and (device-type: tablet) and (orientation: landscape) {
+    .title {
+        font-size: 100px;
+    }
+}
+
+@media screen and (device-type: wearable) {
+    .title {
+        font-size: 28px;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (device-type: tv) {
+    .container {
+        background-image: url("../../common/images/Wallpaper.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .title {
+        font-size: 100px;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (device-type: phone) and (orientation: landscape) {
+    .title {
+        font-size: 60px;
+    }
+}

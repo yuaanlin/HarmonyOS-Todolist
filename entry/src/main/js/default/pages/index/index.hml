@@ -1,0 +1,22 @@
+<div class="container">
+    <text class="title" @click="refresh">
+        待办事项
+    </text>
+    <list class="list">
+        <list-item type="listItem" for="{{ todoList }}">
+            <div class="todoItem" @click="onClick($item)" @longpress="onWantDeleted($idx)">
+                <text if="!$item.done" class="title">{{ $item.title }}</text>
+                <text if="$item.done" class="checked-title">{{ $item.title }}</text>
+                <div if="!$item.done" class="unchecked-radio" @click="doneTodo($item)"></div>
+                <div if="$item.done" class="checked-radio" @click="doneTodo($item)"></div>
+            </div>
+        </list-item>
+    </list>
+    <div>
+        <button @click="goToCreate">+</button>
+    </div>
+    <menu id="apiMenu" onselected="onMenuSelected">
+        <option value="edit">编辑</option>
+        <option value="delete">删除</option>
+    </menu>
+</div>

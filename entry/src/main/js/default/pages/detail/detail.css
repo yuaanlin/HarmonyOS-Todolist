@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+}
+
+button {
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    background-color: #FFA200;
+}
+
+text {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.label {
+    font-size: 18px;
+    margin:18px 0 6px 0;
+}
+
+textarea {
+    padding: 16px
+}
+
+.submit-wrapper {
+    position: absolute;
+    bottom: 36px;
+    margin-top: 28px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.submit-wrapper > button {
+    width: 80%;
+}

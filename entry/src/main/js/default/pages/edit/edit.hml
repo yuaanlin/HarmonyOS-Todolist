@@ -1,0 +1,18 @@
+<div class="container">
+    <div style="display : flex; justify-content : space-between;">
+        <button @click="goBack">回上层</button>
+        <button @click="tryContinueAbility">迁移</button>
+    </div>
+    <text class="title">
+        编辑待办事项
+    </text>
+    <text class="label">标题</text>
+    <input value="{{ title }}" @change="handleTitleChange"/>
+    <text class="label">内容</text>
+    <textarea value="{{ description }}" @change="handleDescriptionChange" style="height : 180px;"/>
+    <text class="label">截止日期</text>
+    <picker type="date" value="{{ deadline }}" @change="handleDeadlineChange"/>
+    <div class="submit-wrapper">
+        <button @click="submit">确定</button>
+    </div>
+</div>

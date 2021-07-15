@@ -1,0 +1,13 @@
+<div class="container">
+    <div style="display: flex; justify-content: space-between;">
+        <button @click="goBack">回上层</button>
+        <button @click="goEdit">编辑</button>
+    </div>
+    <text class="title">
+     {{ this.todo.title }}
+    </text>
+    <text class="label">详细说明</text>
+    <text>{{this.todo.description}}</text>
+    <text class="label">截止日期</text>
+    <text>{{this.todo.deadline}}</text>
+</div>
